@@ -1,11 +1,11 @@
 Package: monier
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Brandon Monier's commonly-used in-house R Code
+Version: 0.0.9
+Author: Brandon Monier
+Maintainer: Brandon Monier <brandon.monier@gmail.com?>
+Description: Miscellaneous R functions that I use for graphics, exploratory
+    data analysis, silly stuff, etc.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
