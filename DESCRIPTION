@@ -1,10 +1,14 @@
 Package: monier
-Type: Package
-Title: Brandon Monier's commonly-used in-house R Code
 Version: 0.0.9
-Author: Brandon Monier
-Maintainer: Brandon Monier <brandon.monier@gmail.com?>
-Description: Miscellaneous R functions that I use for graphics, exploratory
+Date: 2020-01-06
+Title: Brandon Monier's commonly-used in-house R Code
+Authors@R:
+    person(given = "Brandon",
+           family = "Monier",
+           role = c("aut", "cre"),
+           email = "brandon.monier@gmail.com")
+Description: 
+    Miscellaneous R functions that I use for graphics, exploratory
     data analysis, silly stuff, etc.
 License: GPL-3
 Encoding: UTF-8
