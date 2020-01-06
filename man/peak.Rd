@@ -8,6 +8,10 @@ peak(x, pi = 10, pj = 4)
 }
 \arguments{
 \item{x}{An R data frame or matrix object}
+
+\item{pi}{How many rows do you want to select? Defaults to \code{10}.}
+
+\item{pj}{How many columns do you want to select? Defaults to \code{4}.}
 }
 \description{
 Reveals first i rows and j columns.
