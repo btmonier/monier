@@ -6,9 +6,9 @@
 #' @param use Number of units used in total size.
 #' @param total Total number of units in total size.
 #' @param charUse Text character to display used portion of bar. Defaults to
-#'    \code{#}.
-#' @param charRem Text character to display unused portion of bar. Default is
-#'    \code{ }.
+#'    \code{"#"}.
+#' @param charRem Text character to display unused portion of bar. Defaults to
+#'    \code{" "}.
 #' @param charLen Total number of characters used for bar. Default is 25 units.
 #' @param charEnd "Fancy" end pieces if you want them. Must be supplied as a
 #'    vector of character elements. Defaults to \code{c("[", "]")}.
