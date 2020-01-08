@@ -18,6 +18,8 @@ Imports:
     reshape2,
     rlang,
     utils
+Suggests:
+    testthat
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
