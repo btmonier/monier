@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 
 [![Build Status](https://travis-ci.org/btmonier/monier.svg?branch=master)](https://travis-ci.org/btmonier/monier)
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![codecov](https://codecov.io/gh/btmonier/pathr/branch/master/graph/badge.svg)](https://ci.appveyor.com/project/btmonier/pathr)
+
 
 ## Overview
 This R package serves as storage for miscellaneous R functions that I use for 
