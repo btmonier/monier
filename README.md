@@ -2,7 +2,7 @@
 monier <img src="man/figures/monier_logo.svg" align="right" height="120"/>
 ==========================================================================
 
-[![Build Status](https://travis-ci.org/btmonier/monier.svg?branch=master)](https://travis-ci.org/btmonier/monier) [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![codecov](https://codecov.io/gh/btmonier/pathr/branch/master/graph/badge.svg)](https://ci.appveyor.com/project/btmonier/pathr)
+[![Build Status](https://travis-ci.org/btmonier/monier.svg?branch=master)](https://travis-ci.org/btmonier/monier) [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![codecov](https://codecov.io/gh/btmonier/pathr/branch/master/graph/badge.svg)](https://ci.appveyor.com/project/btmonier/monier)
 
 Overview
 --------
