@@ -11,6 +11,13 @@ Description:
     Miscellaneous R functions that I use for graphics, exploratory
     data analysis, silly stuff, etc.
 License: GPL-3 | file LICENSE
+URL: https://github.com/btmonier/monier/
+Imports:
+    ggplot2,
+    RCurl,
+    reshape2,
+    rlang,
+    utils
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
