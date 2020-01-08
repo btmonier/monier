@@ -37,7 +37,7 @@ getBiocStats <- function(pkg) {
             "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
         )
     )
-    df.m <- reshape2::melt(
+    df_m <- reshape2::melt(
         data = df,
         id.vars = c(
             "Year",
@@ -48,13 +48,13 @@ getBiocStats <- function(pkg) {
             "Nb_of_downloads"
         )
     )
-    df.m <- df.m[order(as.Date(df.m$Month, format="%d/%m/%Y")), ]
-    df.m$variable <- gsub("_", " ", df.m$variable)
-    df.m$variable <- gsub("Nb", "No.", df.m$variable)
+    df_m <- df_m[order(as.Date(df_m$Month, format="%d/%m/%Y")), ]
+    df_m$variable <- gsub("_", " ", df_m$variable)
+    df_m$variable <- gsub("Nb", "No.", df_m$variable)
 
     # Visualization
     biocPlot <- ggplot2::ggplot(
-        data = df.m,
+        data = df_m,
         ggplot2::aes(x = .data$Month, y = .data$value, fill = .data$variable)
     ) +
         ggplot2::geom_bar(
