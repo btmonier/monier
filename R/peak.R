@@ -8,5 +8,10 @@
 #'
 #' @export
 peak <- function(x, pi = 10, pj = 4) {
+
+    if (pi > dim(x)[1] || pj > dim(x)[2]) {
+        stop("More rows were selected than provided.")
+    }
+
     return(x[1:pi, 1:pj])
 }
