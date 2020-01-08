@@ -19,10 +19,10 @@ propBar(
 \item{total}{Total number of units in total size.}
 
 \item{charUse}{Text character to display used portion of bar. Defaults to
-\code{#}.}
+\code{"#"}.}
 
-\item{charRem}{Text character to display unused portion of bar. Default is
-\code{ }.}
+\item{charRem}{Text character to display unused portion of bar. Defaults to
+\code{" "}.}
 
 \item{charLen}{Total number of characters used for bar. Default is 25 units.}
 
