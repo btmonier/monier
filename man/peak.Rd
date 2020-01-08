@@ -7,7 +7,7 @@
 peak(x, pi = 10, pj = 4)
 }
 \arguments{
-\item{x}{An R data frame or matrix object}
+\item{x}{An R data frame or matrix object.}
 
 \item{pi}{How many rows do you want to select? Defaults to \code{10}.}
 
