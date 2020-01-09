@@ -13,7 +13,7 @@
 #' @importFrom utils read.delim
 #'
 #' @export
-getBiocStats <- function(pkg) {
+biocStats <- function(pkg) {
     # Contact Bioconductor server
     message("Contacting server...")
 
