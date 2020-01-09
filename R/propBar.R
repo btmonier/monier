@@ -20,6 +20,13 @@ propBar <- function(use,
                     charRem = " ",
                     charLen = 25,
                     charEnd = c("[", "]")) {
+
+    if (!is.numeric(use) || !is.numeric(total) || !is.numeric(25)) {
+        stop("Values must be numeric")
+    }
+    if (use > total) stop("Usage exceeds total usage.")
+    if (length(charEnd) != 2) stop("End caps must be a vector of 2.")
+
     propUse <- use / total
     propRem <- 1 - propUse
 
@@ -31,9 +38,11 @@ propBar <- function(use,
         numUse <- 1
     } else if (numUse == charLen) {
         numUse <- charLen - 1
-    } else {
+    } else if (use == total) {
         numUse
     }
+
+    if (use == total) numUse <- numUse + 1
 
     numRem <- charLen - numUse
 
