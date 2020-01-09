@@ -6,5 +6,8 @@
 #'
 #' @export
 rotateMatrix <- function(x) {
+
+    if (!is.matrix(x)) stop("Object must be of matrix class.")
+
     t(apply(x, 2, rev))
 }
