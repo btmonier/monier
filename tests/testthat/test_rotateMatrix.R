@@ -6,7 +6,7 @@ test_that("rotatMatrix returns error when object is not of matrix class", {
     wrong <- data.frame(a = 1:3, b = letters[1:3])
 
     expect_error(
-        rotatMatrix(x = wrong)
+        rotateMatrix(x = wrong)
     )
 
 })
