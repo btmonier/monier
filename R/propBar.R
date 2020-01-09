@@ -26,7 +26,9 @@ propBar <- function(use,
     if (charLen <= 0) stop("Character length must be greater than 0.")
     if (!is.numeric(use) || !is.numeric(total) || !is.numeric(charLen)) stop("Values must be numeric")
     if (use > total) stop("Usage exceeds total usage.")
-    if (length(charEnd) != 2) stop("End caps must be a vector of 2.")
+    if (length(charEnd) > 2) warning("First two elements will be used.")
+    if (length(charEnd) == 1) charEnd <- rep(charEnd, 2)
+
 
     propUse <- use / total
     propRem <- 1 - propUse
