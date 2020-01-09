@@ -59,7 +59,7 @@ test_that("propBar returns error when usage is < 0", {
 ## Return Tests ----
 test_that("propBar function can return default output", {
 
-    expect_equal(
+    expect_identical(
         object = propBar(use = 5, total = 10, charLen = 25),
         expected = "[############             ]"
     )
@@ -68,7 +68,7 @@ test_that("propBar function can return default output", {
 
 test_that("propBar can return custom characters", {
 
-    expect_equal(
+    expect_identical(
         object = propBar(
             use     = 5,
             total   = 10,
@@ -82,7 +82,7 @@ test_that("propBar can return custom characters", {
 })
 
 test_that("propBar can return custom endcaps", {
-    expect_equal(
+    expect_identical(
         object = propBar(
             use     = 5,
             total   = 10,
@@ -95,7 +95,7 @@ test_that("propBar can return custom endcaps", {
 
 test_that("propBar returns an empty bar", {
 
-    expect_equal(
+    expect_identical(
         object = propBar(use = 0, total = 10, charLen = 25),
         expected = "[                         ]"
     )
@@ -104,12 +104,29 @@ test_that("propBar returns an empty bar", {
 
 test_that("propBar returns a full bar", {
 
-    expect_equal(
+    expect_identical(
         object = propBar(use = 10, total = 10, charLen = 25),
         expected = "[#########################]"
     )
 
 })
 
+test_that("propBar returns units if usage is very small", {
+
+    expect_identical(
+        object = propBar(use = 0.01, total = 10, charLen = 25),
+        expected = "[#                        ]"
+    )
+
+})
+
+test_that("propBar returns units if usage is very close to total", {
+
+    expect_identical(
+        object = propBar(use = 9.99, total = 10, charLen = 25),
+        expected = "[######################## ]"
+    )
+
+})
 
 
