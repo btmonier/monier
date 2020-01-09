@@ -33,17 +33,19 @@ propBar <- function(use,
 
     numUse <- round(propUse * charLen, 0)
 
-    if (use == 0) {
-        numUse <- 0
-    } else if (numUse == 0) {
+    # Small cases
+    if (numUse == 0) {
         numUse <- 1
     } else if (numUse == charLen) {
         numUse <- charLen - 1
-    } else if (use == total) {
-        numUse
     }
 
-    if (use == total) numUse <- numUse + 1
+    # Extreme cases
+    if (use == 0) {
+        numUse <- 0
+    } else if (use == total) {
+        numUse <- charLen
+    }
 
     numRem <- charLen - numUse
 
