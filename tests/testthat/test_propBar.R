@@ -1,5 +1,6 @@
 # === Tests for `propBar` function ==================================
 
+#####################################################################
 ## Error Tests ----
 test_that("propBar returns error when usage exceeds total", {
 
@@ -15,19 +16,13 @@ test_that("propBar returns error when non-numeric entities are used", {
     expect_error(
         propBar(use = "10", total = 10)
     )
+
     expect_error(
         propBar(use = 10, total = "10")
     )
+
     expect_error(
         propBar(use = 10, total = 10, charLen = "25")
-    )
-
-})
-
-test_that("propBar returns error when endcaps do not equal 2", {
-
-    expect_error(
-        propBar(use = 10, total = 10, charEnd = c("["))
     )
 
 })
@@ -56,6 +51,22 @@ test_that("propBar returns error when usage is < 0", {
 
 })
 
+
+
+#####################################################################
+## Warning Tests ----
+test_that("propBar returns warning when endcaps do not equal 2", {
+
+    expect_warning(
+        propBar(use = 5, total = 10, charEnd = c("[", "]", "|"))
+    )
+
+})
+
+
+
+
+#####################################################################
 ## Return Tests ----
 test_that("propBar function can return default output", {
 
@@ -125,6 +136,16 @@ test_that("propBar returns units if usage is very close to total", {
     expect_identical(
         object = propBar(use = 9.99, total = 10, charLen = 25),
         expected = "[######################## ]"
+    )
+
+})
+
+
+test_that("propBar returns end caps if only one is entered", {
+
+    expect_identical(
+        object = propBar(use = 5, total = 10, charLen = 25, charEnd = "|"),
+        expected = "|############             |"
     )
 
 })
