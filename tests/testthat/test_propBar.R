@@ -1,14 +1,17 @@
 # === Tests for `propBar` function ==================================
 
-## Tests ----
-test_that("propBar function returns error", {
+## Error Tests ----
+test_that("propBar returns error when usage exceeds total", {
 
     # Usage exceeds total values
     expect_error(
         propBar(use = 11, total = 10)
     )
 
-    # Values are not numeric
+})
+
+test_that("propBar returns error when non-numeric entities are used", {
+
     expect_error(
         propBar(use = "10", total = 10)
     )
@@ -19,23 +22,45 @@ test_that("propBar function returns error", {
         propBar(use = 10, total = 10, charLen = "25")
     )
 
-    # End caps do not equal 2
+})
+
+test_that("propBar returns error when endcaps do not equal 2", {
+
     expect_error(
         propBar(use = 10, total = 10, charEnd = c("["))
     )
 
 })
 
+test_that("propBar returns error when bar width <= 0", {
 
-test_that("propBar function returns correct output", {
+    expect_error(
+        propBar(use = 3, total = 10, charLen = -3)
+    )
 
-    # Normal conditions
+})
+
+test_that("propBar returns error when usage <= 0", {
+
+    expect_error(
+        propBar(use = 3, total = -10)
+    )
+
+})
+
+
+## Return Tests ----
+test_that("propBar function can return default output", {
+
     expect_equal(
         object = propBar(use = 5, total = 10, charLen = 25),
         expected = "[############             ]"
     )
 
-    # Normal conditions - change character types
+})
+
+test_that("propBar can return custom characters", {
+
     expect_equal(
         object = propBar(
             use     = 5,
@@ -47,7 +72,9 @@ test_that("propBar function returns correct output", {
         expected = "[============-------------]"
     )
 
-    # Normal conditions - change character types
+})
+
+test_that("propBar can return custom endcaps", {
     expect_equal(
         object = propBar(
             use     = 5,
@@ -57,19 +84,25 @@ test_that("propBar function returns correct output", {
         ),
         expected = "|############             |"
     )
+})
 
-    # What if usage is 0?
+test_that("propBar returns an empty bar", {
+
     expect_equal(
         object = propBar(use = 0, total = 10, charLen = 25),
         expected = "[                         ]"
     )
 
-    # What if usage == total?
+})
+
+test_that("propBar returns a full bar", {
+
     expect_equal(
         object = propBar(use = 10, total = 10, charLen = 25),
         expected = "[#########################]"
     )
 
 })
+
 
 
