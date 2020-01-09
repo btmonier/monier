@@ -32,7 +32,7 @@ test_that("propBar returns error when endcaps do not equal 2", {
 
 })
 
-test_that("propBar returns error when bar width <= 0", {
+test_that("propBar returns error when bar width is <= 0", {
 
     expect_error(
         propBar(use = 3, total = 10, charLen = -3)
@@ -40,7 +40,7 @@ test_that("propBar returns error when bar width <= 0", {
 
 })
 
-test_that("propBar returns error when usage <= 0", {
+test_that("propBar returns error when total usage is <= 0", {
 
     expect_error(
         propBar(use = 3, total = -10)
@@ -48,6 +48,13 @@ test_that("propBar returns error when usage <= 0", {
 
 })
 
+test_that("propBar returns error when usage is < 0", {
+
+    expect_error(
+        propBar(use = -3, total = 10)
+    )
+
+})
 
 ## Return Tests ----
 test_that("propBar function can return default output", {
