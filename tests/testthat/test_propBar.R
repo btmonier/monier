@@ -65,7 +65,6 @@ test_that("propBar returns warning when endcaps do not equal 2", {
 
 
 
-
 #####################################################################
 ## Return Tests ----
 test_that("propBar function can return default output", {
