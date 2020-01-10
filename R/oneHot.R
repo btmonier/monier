@@ -1,8 +1,8 @@
 #' @title One-hot encode a DNA sequence
 #'
 #' @description Takes a DNA string and returns a one-hot encoded matrix of
-#'    4 rows \code{c("A", "C", "G", "T")} with \math{j}-columns, where
-#'    \math{j} is the number of characters in a DNA string.
+#'    4 rows \code{c("A", "C", "G", "T")} with \eqn{j}-columns, where
+#'    \eqn{j} is the number of characters in a DNA string.
 #'
 #' @param s A character string of a DNA sequence.
 #' @param n A character vector of given nucleotide elements. Defaults to
