@@ -2,6 +2,8 @@
 #'
 #' @param t Time
 #' @param unit Unit of time `t`. Defaults to minute (`m`).
+#'
+#' @export
 brb <- function(t, unit = c("m", "s", "h")) {
     timeSnap <- Sys.time()
 
