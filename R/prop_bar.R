@@ -1,3 +1,4 @@
+## ----
 #' @title Make text-based proportion bars in the console
 #'
 #' @description Generates a text-based proportion bar for downstream
@@ -60,3 +61,5 @@ propBar <- function(use,
 
     return(text_bar)
 }
+
+

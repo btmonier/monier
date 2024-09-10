@@ -1,3 +1,4 @@
+## ----
 #' @title One-hot encode a DNA sequence
 #'
 #' @description Takes a DNA string and returns a one-hot encoded matrix of
@@ -29,3 +30,5 @@ oneHot <- function(s, n = c("A", "C", "G", "T")) {
     return(seq_mat)
 
 }
+
+

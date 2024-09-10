@@ -2,6 +2,7 @@
 
 export(biocStats)
 export(brb)
+export(createDirs)
 export(oneHot)
 export(peak)
 export(propBar)
