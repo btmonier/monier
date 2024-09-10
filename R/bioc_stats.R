@@ -1,3 +1,4 @@
+## ----
 #' @title Get Bioconductor statistics
 #'
 #' @description Pulls package data from Bioconductor and plots number of
@@ -75,3 +76,5 @@ biocStats <- function(pkg) {
     return(biocPlot)
 
 }
+
+

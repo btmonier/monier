@@ -1,3 +1,4 @@
+## ----
 #' @title Be right back message prompt
 #'
 #' @param t Time
@@ -20,3 +21,5 @@ brb <- function(t, unit = c("m", "s", "h")) {
 
     message("We'll be back at: ", timeSnapReturn)
 }
+
+
